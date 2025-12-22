@@ -25,7 +25,7 @@ function trieParNom() {
       personnes[i] = personnes[indexMin];
       personnes[indexMin] = swap;
     }
-    console.log(personnes);
+    return personnes;
   });
 }
-trieParNom();
+console.log(trieParNom());
