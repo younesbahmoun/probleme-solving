@@ -1,0 +1,35 @@
+● Questions Théoriques :
+    1)
+        - différence entre DDL (CREATE, ALTER) et DML (INSERT, UPDATE,DELETE):
+            - DDL et (Data Definition Language) et Commandes SQL pour definer des tables et objets de la base de données (CREATE TABLE, ALTER TABLE, DROP TABLE)
+            - DML (Data Manipulation Language) et commendes SQL pour manipuler data de la base de données (insertion, modification, suppression, lecture)
+    2)
+        -  une clé primaire ceat'un concept utilise en base de données pour separer le row par id caracteristique et unique et not null et auto increment
+        -  chat: 
+            -  Une clé primaire (Primary Key) est un attribut ou un ensemble d’attributs qui identifie de manière unique chaque enregistrement dans une table.
+    3)
+        - filtrage de données avec WHERE par id ou nom
+        - chat:
+            -  La clause WHERE permet de sélectionner uniquement les enregistrements qui remplissent une condition donnée dans une requête SQL.
+            -  Elle agit comme un filtre sur les lignes d’une table.
+            -  Seules les lignes vérifiant la condition sont traitées ou renvoyées.
+
+● Challenges Pratiques :
+    1)
+        CREATE TABLE Produits (
+            id SERIAL PRIMARY KEY,
+            nom VARCHAR(255) NOT NULL,
+            prix DECIMAL(10, 2) NOT NULL CHECK (prix >= 0),
+            stock INT NOT NULL DEFAULT 0 CHECK (stock >= 0)
+        );
+    2)
+        INSERT INTO Produits (nom, prix, stock)
+        VALUES
+        ('p1', 100.5, 10),
+        ('p2', 100.59, 10),
+        ('p3', 100.5, 0);
+    3)
+        1)
+            UPDATE Produits SET prix = prix * 1.1 WHERE id = ?;
+        2)
+            DELETE FROM Produits WHERE stock = 0;

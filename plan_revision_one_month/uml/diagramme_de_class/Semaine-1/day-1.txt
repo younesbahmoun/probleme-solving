@@ -1,0 +1,10 @@
+● Questions Théoriques :
+    1)
+        - Une classe dans un diagramme de classes est une entité qui représente un concept métier, avec des données (attributs) et des actions (méthodes).
+    2)
+        - Une classe sans méthodes est problématique car elle ne porte aucun comportement et ne respecte pas l’encapsulation en POO.
+        - Elles ne respectent pas les principes de la programmation orientée objet (Encapsulation, Responsabilité(Single Responsibility))
+    3)
+        - Une classe ne doit avoir qu’une seule responsabilité, c’est-à-dire une seule raison de changer.
+            - Une classe de persistance (Repository) contient uniquement les opérations sur la base de données.
+            - Une classe d’affichage (View/Controller) contient uniquement l’affichage ou l’interface utilisateur.
