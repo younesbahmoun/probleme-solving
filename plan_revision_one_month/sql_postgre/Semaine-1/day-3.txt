@@ -1,0 +1,26 @@
+● Questions Théoriques :
+    1)
+        -  COUNT() : en generale pour calculer la nombre total
+        -  SUM() : pour calculer la somme dans en colonne
+        -  AVG() : pour calculer la moyenne dans en colonne
+    2)
+        oui pour :
+        -  COUNT(*) : utilise pour clalculer le nombre totale de row dans un tableau
+        -  COUNT(colonne) : utilise pour clalculer le nombre totale de row dans une colonne
+    3)
+        -  MAX : retourner la valeur plus grand value dans colonne
+        -  MIN : retourner la valeur plus petite  value dans colonne
+        compare chaine en table ASCII
+        chat:
+            -  MAX et MIN peuvent s’appliquer à n’importe quel type comparable : numériques, dates, chaînes.
+            -  Sur dates → permettent trouver la date la plus ancienne ou la plus récente.
+            -  Sur chaînes → permettent trouver la valeur “la plus grande” ou “la plus petite” selon l’ordre lexicographique.
+
+
+● Challenges Pratiques :
+    1)
+        SELECT COUNT(*) FROM commandes;
+    2)
+        SELECT AVG(prix) FROM produits;
+    3)
+        SELECT MAX(montant) FROM commandes;
