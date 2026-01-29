@@ -1,0 +1,34 @@
+● Questions Théoriques :
+    1)
+        -  object ceat'un instance de la class
+        -  chat:
+            -  Une classe est une entité abstraite qui sert de modèle pour définir les caractéristiques (attributs) et les comportements (méthodes) d’un ensemble d’objets.
+            -  Un objet est une instance concrète d’une classe. Il représente une entité réelle créée à partir de ce modèle et possède des valeurs propres pour ses attributs.
+    2)
+        -  le Mot-cle $this utilise pour acceder le attribute intern class 
+    3)
+        -  le rôle du constructeur (__construct) et creation des object initialiser les valeur par defaut
+
+
+● Challenges Pratiques :
+    1)
+        class Voiture {
+
+            private string $marque;
+            private string $modele;
+            private int $vitesse;
+
+            public function accelerer(int $vitesse) {
+                return $this->vitesse += $vitesse;
+            }
+        }
+    2)
+        public function __construct (string $marque, string $modele) {
+            $this->marque = $marque;
+            $this->modele = $modele;
+        }
+    3)
+        v1 = new Voiture ("BMW", "2024", 320);
+        v1 = new Voiture ("AUDI", "2025", 200);
+        v1->accelerer(-20);
+        v1->accelerer(50);
