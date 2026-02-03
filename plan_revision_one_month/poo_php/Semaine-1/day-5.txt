@@ -1,0 +1,49 @@
+● Questions Théoriques :
+    1)
+        -  l’encapsulation utilise en poo pour neat pat acceder une proprieter dans une class
+        - but pour secureter les donner dans la class
+    2)
+        -  public : pour acceder autre class
+        -  private : accerer just class
+        -  protected : pour acceder class file
+    3)
+        -  getters et setters pout ceat'un concept de encapsulation pour moddifier et lire la propriter
+
+
+● Challenges Pratiques :
+
+    1) 2)
+        class Voiture {
+
+            private string $marque;
+            private string $modele;
+            private int $vitesse;
+
+            public function getVitesse() {
+                return $this->vitesse;
+            }
+
+            public function gsetVitesse(int $v) {
+                if ($v >= 0) {
+                    $this->vitesse = $v;
+                } else {
+                    throw new InvalidArgumentException("Le vitesse à déposer doit être positif");
+                }
+            }
+        }
+
+    3)
+        class CompteBancaire {
+            private float $solde;
+
+            public function deposer(float $montant) {
+                $this->solde += $montant;
+            }
+
+            public function retirer($montant) {
+                if ($this->solde >= $montant) {
+                    $this->solde -= $montant;
+                    return  $montant;
+                }
+            }
+        }
