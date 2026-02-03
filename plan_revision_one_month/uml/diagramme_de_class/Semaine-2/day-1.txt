@@ -1,0 +1,42 @@
+● Questions Théoriques :
+    1)
+        -  Composition (relation forte)
+        -  Agrégation (relation faible)
+    2)
+        -  On lit chaque cardinalité du point de vue de l’autre classe
+        -  Lecture:
+            -  Un étudiant suit un ou plusieurs cours
+    3)
+        -  Relie deux classes en many-to-many
+
+● Challenges Pratiques :
+
+    1) 
+        -  la relation entre Maison et Piece et rolation fort (composition) par ce que supprimer maison par defaulte piece supprimer
+        -  chat: 
+            -  Une Pièce n’existe pas sans la Maison
+    2)
+        -  chat:
+            -  Un étudiant peut exister sans cours
+
+            -  Un cours peut exister sans étudiant
+
+            -  La relation est many-to-many
+
+            -  Les deux entités sont indépendantes
+
+    3)
+        class CompteBancaire {
+            private float $solde;
+
+            public function deposer(float $montant) {
+                $this->solde += $montant;
+            }
+
+            public function retirer($montant) {
+                if ($this->solde >= $montant) {
+                    $this->solde -= $montant;
+                    return  $montant;
+                }
+            }
+        }
