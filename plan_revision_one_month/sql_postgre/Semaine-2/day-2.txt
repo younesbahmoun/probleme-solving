@@ -1,0 +1,32 @@
+● Questions Théoriques :
+    1)
+        -  INNER JOIN
+            -  Affiche uniquement les lignes qui ont une correspondance dans les deux tables
+            -  Les lignes sans relation sont ignorées
+        -  LEFT JOIN
+            -  Affiche toutes les lignes de la table de gauche
+            -  Les lignes sans correspondance dans la table de droite apparaissent avec NULL
+    2)
+        -  RIGHT JOIN
+            -  Le RIGHT JOIN est l’inverse du LEFT JOIN.
+            -  Il affiche toutes les lignes de la table de droite, même si elles n’ont aucune correspondance dans la table de gauche.
+            -  Les lignes de la table de gauche sans correspondance apparaissent avec NULL.
+
+    3)
+        - Oui, on peut joindre plus de deux tables dans une seule requête SQL en ajoutant plusieurs JOIN successifs avec leurs conditions de liaison.
+
+● Challenges Pratiques :
+    1)
+        SELECT 
+            cm.*,
+            cl.nom
+        FROM commandes cm
+        INNER JOIN clients cl ON cl.id = cm.client_id;
+    2)
+        SELECT
+            cl.id,
+            cl.nom,
+            cl.prenom,
+            cm.montant
+        FROM clients cl
+        LEFT JOIN commande cm ON cm.client_id = cl.id;
